@@ -1,0 +1,29 @@
+.headerContainer__title{
+    font-size: 5rem;
+}
+.dataContainer__description{
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: white;
+}
+.dataContainer__form input{
+    height: 6rem;
+    width: 50rem;
+    font-size: 3rem;
+    padding: 0 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+#dataButton{
+    margin-top: 3rem;
+	background-color:#decede;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	cursor:pointer;
+	color:black;
+	font-weight:bold;
+	padding:6px 24px;
+    height: 5rem;
+    width: 15rem;
+    font-size: 3rem;
+}

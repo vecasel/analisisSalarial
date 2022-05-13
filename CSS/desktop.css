@@ -1,0 +1,19 @@
+body{
+    flex-direction: column;
+}
+.headerContainer{
+    margin-top: 4rem;
+    width: 40%;
+}
+.headerContainer__title{
+    font-size: 4rem;
+}
+.dataContainer{
+    width: 40%;
+}
+.mainContainer{
+    width: 30%;
+}
+.resultContainer{
+    width: 30%;
+}

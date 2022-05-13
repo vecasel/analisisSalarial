@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Salarial</title>
+    <link rel="stylesheet" href="./CSS/phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Comforter&family=Lato:wght@900&family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/laptop.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" href="./CSS/desktop.css" media="screen and (min-width: 1200px)">
+</head>
+<body>
+    <header class="headerContainer">
+        <h1 class="headerContainer__title">ANÁLISIS SALARIAL</h1>
+    </header>
+    <section class="dataContainer" id="dataContainer">
+        <p class="dataContainer__description">Programa para realizar un análisis salarial. <br><br> Por favor ingresa el número de datos que deseas para realizar el análisis.</p>
+        <form class="dataContainer__form">
+            <label for="dataLabelContainer" class="form__labelData"></label>
+            <input type="number" name="dataLabelContainer" id="dataLabelContainer">
+        </form>
+        <button type="button" id="dataButton">Enviar</button>
+    </section>
+    <section class="mainContainer" id="mainContainer">
+        <p class="mainContainer__description">Por favor ingresa los datos para realizar el análisis.</p>
+        <form action="" class="mainContainer__form">
+            <label for="" class="form__position">
+                Nombre del cargo
+            </label>
+            <input type="text">
+            <label for="" class="form__country">
+                País
+            </label>
+            <input type="text">
+            <label for="" class="form__salary">
+                Salario del cargo
+            </label>
+            <input type="number">
+            <label for="" class="form__ingress">
+                Ingresos adicionales
+            </label>
+            <input type="nuber">
+            <label for="" class="form__spent">
+                Gastos mensuales
+            </label>
+            <input type="number">
+            <button class="mainButton" type="button" id="mainButton">Siguiente Dato</button>
+            <div class="container__button">
+                <section class="button_container">
+                    <button class="button" type="button" id="button">Enviar Datos</button>
+                </section>
+            </div>
+        </form>
+    </section>
+    <section class="resultContainer" id="resultContainer">
+        <p>Los datos enviados son:</p>
+        <div>
+            <p id="medianaResult"></p>
+        </div>
+        <p>La capacidad de endeudamiento por cargo es:</p>
+        <div>
+            <p id="endResult"></p>
+        </div>
+        <p> La capacidad de ahorro por cargo es:</p>
+        <div>
+            <p id="ahorroResult"></p>
+        </div>
+        <p>El top 10% de los salarios es:</p>
+        <div>
+            <p id="topResult"></p>
+        </div>
+    </section>
+    <script src="events.js"></script>
+    <script src="salaries.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
