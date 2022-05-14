@@ -16,60 +16,52 @@
     <header class="headerContainer">
         <h1 class="headerContainer__title">ANÁLISIS SALARIAL</h1>
     </header>
-    <section class="dataContainer" id="dataContainer">
-        <p class="dataContainer__description">Programa para realizar un análisis salarial. <br><br> Por favor ingresa el número de datos que deseas para realizar el análisis.</p>
-        <form class="dataContainer__form">
-            <label for="dataLabelContainer" class="form__labelData"></label>
-            <input type="number" name="dataLabelContainer" id="dataLabelContainer">
-        </form>
-        <button type="button" id="dataButton">Enviar</button>
-    </section>
     <section class="mainContainer" id="mainContainer">
-        <p class="mainContainer__description">Por favor ingresa los datos para realizar el análisis.</p>
-        <form action="" class="mainContainer__form">
-            <label for="" class="form__position">
-                Nombre del cargo
+        <p class="mainContainer__description">Programa para realizar un análisis salarial. Por favor ingresa los datos para realizar el análisis.</p>
+        <form class="mainContainer__form" id="mainContainer__form">
+            <label for="ocupation" class="form__position">
+                Nombre
             </label>
-            <input type="text">
-            <label for="" class="form__country">
-                País
-            </label>
-            <input type="text">
-            <label for="" class="form__salary">
+            <input type="text" id="ocupation">
+            <label for="salary" class="form__salary">
                 Salario del cargo
             </label>
-            <input type="number">
-            <label for="" class="form__ingress">
+            <input type="number" id="salary">
+            <label for="other" class="form__ingress">
                 Ingresos adicionales
             </label>
-            <input type="nuber">
-            <label for="" class="form__spent">
+            <input type="number" id="other">
+            <label for="bills" class="form__spent">
                 Gastos mensuales
             </label>
-            <input type="number">
+            <input type="number" id="bills">
             <button class="mainButton" type="button" id="mainButton">Siguiente Dato</button>
             <div class="container__button">
                 <section class="button_container">
-                    <button class="button" type="button" id="button">Enviar Datos</button>
+                    <button class="button" type="button" id="button" onclick="dataAnalysis()">Enviar Datos</button>
                 </section>
             </div>
         </form>
     </section>
     <section class="resultContainer" id="resultContainer">
         <p>Los datos enviados son:</p>
+        <div class="resultContainer__firstDiv">
+            <p id="dataResult"></p>
+        </div>
+        <p>La mediana de los salarios es: </p>
         <div>
             <p id="medianaResult"></p>
         </div>
-        <p>La capacidad de endeudamiento por cargo es:</p>
+        <p>La capacidad de endeudamiento por persona es:</p>
         <div>
             <p id="endResult"></p>
         </div>
-        <p> La capacidad de ahorro por cargo es:</p>
+        <p> La capacidad de ahorro por persona es:</p>
         <div>
             <p id="ahorroResult"></p>
         </div>
-        <p>El top 10% de los salarios es:</p>
-        <div>
+        <p>El top 3 de los salarios es:</p>
+        <div class="resultContainer__tDiv">
             <p id="topResult"></p>
         </div>
     </section>
