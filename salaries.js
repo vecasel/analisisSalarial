@@ -9,7 +9,7 @@ function arrayDatosImp(salaries){
 
 function arrayMapeado(salaries){
     let arrayMap = salaries.map(iter => {
-        return iter.salr;
+        return iter.salr + iter.otherSalr;
     });
     return arrayMap;
 }
@@ -43,7 +43,7 @@ function endeudamiento(salaries){
 
     for(j = 0; j < salaries.length; j++){
         salaryEndArray.push(
-            {endeud: ((salaries[j].salr + salaries[j].otherSalr) * 0.35).toFixed(2)}
+            {endeud: (((salaries[j].salr + salaries[j].otherSalr) - salaries[j].bi)* 0.35).toFixed(2)}
         )
     }
 
@@ -80,19 +80,25 @@ function ahorroCalc(salaries){
 }
 
 
-function topSalary(arrayOrd, salaries){
+function topSalary(salaries){
     let orArray = [];
-    let j = 0;
-    
 
-    for (i = arrayOrd.length - 1 ; i >= arrayOrd.length - 3 ; i-- ){
+    let arrayMap = salaries.map(iter => {
+        return {name: iter.ocup, salary: iter.salr + iter.otherSalr}
+    });
+
+    let arraySorted = arrayMap.sort((a,b) =>{
+        return a.salary- b.salary;
+    });
+    for (i = arraySorted.length - 1; i >= (arraySorted.length - 3); i--){
         orArray.push(
-            {nombre: salaries[j].ocup, salario: arrayOrd[i]}   
+            {name: arraySorted[i].name, salary: arraySorted[i].salary}   
         )
-        j++;
     }
+
     let dataArray = orArray.map(iter => {
-        return '<li>' + "Nombre: " + iter.nombre + '<li>' + "Salario: " + iter.salario + '<br>';
+        return '<li>' + "Nombre: " + iter.name + '<li>' + "Salario: " + iter.salary + '<br>';
     });
     document.getElementById("topResult").innerHTML = dataArray;
 }
+ 
